@@ -37,4 +37,4 @@ const CreateTwit = async (body, token) => {
   }
 };
 
-export { FetchAllTwits };
+export { FetchAllTwits, CreateTwit };
