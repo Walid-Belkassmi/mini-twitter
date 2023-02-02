@@ -1,22 +1,28 @@
-import { View } from "react-native";
-import { NativeRouter, Routes, Route } from "react-router-native";
-import Nav from "./components/Nav";
+import { NativeRouter, Route, Routes } from "react-router-native";
+import Header from "./Components/Header";
+import Nav from "./Components/Nav";
+import { UserContextProvider } from "./Context/User";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-
-import globalStyles from "./styles/global";
+import Profil from "./pages/Profil";
+import Signup from "./pages/Signup";
+import Tweet from "./pages/Tweet";
 
 const App = () => {
   return (
-    <View style={globalStyles.container}>
-      <NativeRouter>
+    <NativeRouter>
+      <UserContextProvider>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/Tweet/:id" element={<Tweet />} />
+          <Route path="/Profil" element={<Profil />} />
         </Routes>
         <Nav />
-      </NativeRouter>
-    </View>
+      </UserContextProvider>
+    </NativeRouter>
   );
 };
 

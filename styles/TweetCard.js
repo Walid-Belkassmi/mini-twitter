@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
 
-const Twit = StyleSheet.create({
+const TweetStyles = StyleSheet.create({
   container: {
     borderTopWidth: 2,
     borderBottomWidth: 2,
-    borderColor: "#FC7987",
+    borderColor: "#0096c7",
     margin: 20,
     padding: 20,
   },
@@ -21,4 +21,4 @@ const Twit = StyleSheet.create({
   },
 });
 
-export default Twit;
+export default TweetStyles;
